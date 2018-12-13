@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="other_dim">100dp</dimen>
+    <dimen name="police_dim">150dp</dimen>
+    <dimen name="small_button">40dp</dimen>
+    <dimen name="input_text_size">14sp</dimen>
+    <dimen name="margin_tiny">5dp</dimen>
+    <dimen name="lowest_txt_size">12sp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_med">20dp</dimen>
+    <dimen name="margin_large">35dp</dimen>
+    <dimen name="activity_padding">10dp</dimen>
+</resources>

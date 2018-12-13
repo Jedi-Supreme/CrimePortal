@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="custom_app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/window_gradient</item>
+    </style>
+
+    <style name="input_style">
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/input_border</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/input_text_size</item>
+    </style>
+
+    <style name="butons_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_back_selector</item>
+    </style>
+
+    <style name="report_butons" parent="butons_style">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="small_button" parent="butons_style">
+        <item name="android:layout_height">@dimen/small_button</item>
+        <item name="android:layout_width">@dimen/small_button</item>
+    </style>
+
+    <style name="edit_text_input">
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:textSize">@dimen/input_text_size</item>
+    </style>
+
+    <style name="text_label">
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/window_gradient</item>
+    </style>
+
+    <style name="action_buttons">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="complain_style">
+        <item name="android:textSize">@dimen/lowest_txt_size</item>
+        <item name="android:padding">@dimen/margin_tiny</item>
+    </style>
+
+
+
+</resources>

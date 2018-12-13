@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_menu_investigate" android:title="@string/investigate"/>
+    <item android:id="@+id/action_menu_solved" android:title="@string/mark_solved"/>
+</menu>

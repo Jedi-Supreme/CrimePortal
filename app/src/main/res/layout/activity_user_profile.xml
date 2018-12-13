@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/user_profile_layout"
+    tools:context=".activities.UserProfile">
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pro_bar_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--profile details card view-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/user_details_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/pro_bar_profile"
+        app:layout_constraintBottom_toTopOf="@id/emergency_contacts_card"
+        app:cardElevation="@dimen/margin_small"
+        app:cardUseCompatPadding="true"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_profile_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_tiny"
+                android:text="@string/profile_details"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Firstname input layout-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_profile_fn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/input_profile_ln"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_label">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_profile_fn"
+                    android:textSize="@dimen/input_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_person_outline_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/firstname"
+                    android:inputType="textPersonName"
+                    android:longClickable="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--lastname input layout-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_profile_ln"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                app:layout_constraintLeft_toRightOf="@id/input_profile_fn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_label">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_profile_ln"
+                    android:textSize="@dimen/input_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_person_outline_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/lastname"
+                    android:inputType="textPersonName"
+                    android:longClickable="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Mobile number input layout-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_profile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                app:layout_constraintTop_toBottomOf="@id/input_profile_fn"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_profile_number"
+                    android:textSize="@dimen/input_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_smartphone_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/mobile_number"
+                    android:inputType="textMultiLine"
+                    android:longClickable="false"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Home Address input layout-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_profile_homeAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bt_profile_map"
+                android:layout_marginEnd="@dimen/margin_tiny"
+                android:layout_marginTop="@dimen/margin_tiny"
+                app:layout_constraintTop_toBottomOf="@id/input_profile_number"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_profile_homeadd"
+                    android:textSize="@dimen/input_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_pin_drop_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/home_address"
+                    android:inputType="textMultiLine"
+                    android:longClickable="false"
+                    android:maxLines="2"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--map button-->
+            <Button
+                android:onClick="user_map_view"
+                android:layout_marginEnd="@dimen/margin_tiny"
+                android:id="@+id/bt_profile_map"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:background="@drawable/map_layer"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintRight_toLeftOf="@id/bt_profile_directions"
+                app:layout_constraintTop_toTopOf="@id/input_profile_homeAdd"
+                app:layout_constraintBottom_toBottomOf="@id/input_profile_homeAdd"
+                />
+
+            <!--directions button-->
+            <Button
+                android:onClick="user_map_view"
+                android:layout_marginEnd="@dimen/margin_tiny"
+                android:id="@+id/bt_profile_directions"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:background="@drawable/directions_layer"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/input_profile_homeAdd"
+                app:layout_constraintBottom_toBottomOf="@id/input_profile_homeAdd"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--Contacts card view-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/emergency_contacts_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/margin_small"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/user_details_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_emergency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_tiny"
+                android:text="@string/emergency_contact_number_s"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:animateLayoutChanges="false"
+                android:id="@+id/lv_profile_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_emergency_label" />
+
+            <ImageView
+                android:id="@+id/iv_profile_logo"
+                android:layout_width="@dimen/police_dim"
+                android:layout_height="@dimen/police_dim"
+                android:alpha="0.2"
+                android:contentDescription="@string/law_enforcer_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/crimeportal_logo5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

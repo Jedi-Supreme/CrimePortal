@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_padding"
+    android:animateLayoutChanges="true"
+    android:id="@+id/login_layout"
+    tools:context=".activities.login_activity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/law_enforcer_logo"
+        android:src="@drawable/crimeportal_logo5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/input_style"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_login_email"
+            android:textSize="@dimen/input_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+            android:hint="@string/email"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/input_style"
+        android:id="@+id/input_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/input_login_email">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_login_password"
+            android:textSize="@dimen/input_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+            android:hint="@string/password"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pro_bar_loogin"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        style="@style/butons_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:onClick="enforcer_login"
+        android:text="@string/login"
+        app:layout_constraintTop_toBottomOf="@id/input_login_password" />
+
+</android.support.constraint.ConstraintLayout>

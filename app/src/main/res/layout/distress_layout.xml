@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/margin_tiny"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/window_gradient">
+
+        <!--name-->
+        <TextView
+            android:id="@+id/tv_diss_name"
+            style="@style/complain_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_tiny"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diss_date_time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_diss_date_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--alert state-->
+        <TextView
+            android:id="@+id/tv_diss_state"
+            style="@style/complain_style"
+            android:textSize="@dimen/input_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:padding="2dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diss_name"
+            app:layout_constraintRight_toRightOf="@id/tv_diss_name"
+            app:layout_constraintTop_toTopOf="@id/tv_diss_name" />
+
+        <!--time-->
+        <TextView
+            android:id="@+id/tv_diss_date_time"
+            android:textSize="@dimen/lowest_txt_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/row_date_back"
+            android:padding="@dimen/margin_tiny"
+            android:textAlignment="center"
+            android:textColor="@color/report_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--alert body-->
+        <TextView
+            android:layout_marginEnd="@dimen/margin_tiny"
+            android:id="@+id/tv_diss_body"
+            style="@style/complain_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="#FFF176"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bt_diss_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_diss_date_time" />
+
+        <!--profile button-->
+        <Button
+            android:layout_marginEnd="@dimen/margin_tiny"
+            android:id="@+id/bt_diss_profile"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:background="@drawable/ic_person_blue_gray_24dp"
+            android:layout_width="@dimen/margin_med"
+            android:layout_height="@dimen/margin_med"
+            app:layout_constraintRight_toLeftOf="@id/bt_diss_map"
+            app:layout_constraintTop_toTopOf="@id/tv_diss_body"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diss_body"
+            />
+
+        <!--map button-->
+        <Button
+            android:layout_marginEnd="@dimen/margin_tiny"
+            android:id="@+id/bt_diss_map"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:background="@drawable/ic_map_blue_grey_24dp"
+            android:layout_width="@dimen/margin_med"
+            android:layout_height="@dimen/margin_med"
+            app:layout_constraintRight_toLeftOf="@id/bt_diss_directions"
+            app:layout_constraintTop_toTopOf="@id/tv_diss_body"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diss_body"
+            />
+
+        <!--directions button-->
+        <Button
+            android:id="@+id/bt_diss_directions"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:background="@drawable/ic_directions_blue_gray_24dp"
+            android:layout_width="@dimen/margin_med"
+            android:layout_height="@dimen/margin_med"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_diss_body"
+            app:layout_constraintBottom_toBottomOf="@id/tv_diss_body"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">U.S.E.R.S - L.E.</string>
+    <string name="investigate">Investigate</string>
+    <string name="mark_solved">Mark Solved</string>
+    <string name="view_on_map">View On Map</string>
+    <string name="profile">Profile</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="home_latitude">Latitude</string>
+    <string name="home_longitude">Longitude</string>
+    <string name="home">Home</string>
+    <string name="emergency_contact_number_s">Emergency Contact number(s)</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="law_enforcer_logo">law enforcer logo</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="empty_report">No Reports withing this Vicinity</string>
+    <string name="loading_label">Loading...</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="home_address">Home Address</string>
+</resources>
